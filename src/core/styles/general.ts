@@ -6,7 +6,7 @@ const General = createGlobalStyle`
 	}
 
 	html {
-
+		background-color: rgba(40 42 54 / 1);
 	}
 
 	body {

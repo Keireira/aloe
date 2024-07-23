@@ -33,19 +33,22 @@ export const Input = styled.input<StyleProps>`
 	width: 100%;
 	margin: 0;
 	padding: 17px 16px;
-	color: #000;
+	color: rgba(250 250 250 / 1);
 	font-size: 14px;
 	font-family: 'Nunito Sans', sans-serif;
 	line-height: 19px;
 	background-color: transparent;
 	border: none;
-	border-radius: ${({ $isRounded }) => ($isRounded ? '80px' : '8px')};
+	border-radius: ${({ $isRounded }) => ($isRounded ? '80px' : '16px')};
 
 	&:not(:placeholder-shown),
 	&:focus {
 		${focused}
 		&:autofill {
 			padding: 17px 16px;
+			border: 1px solid #666;
+			-webkit-text-fill-color: rgba(250 250 250 / 1);
+			box-shadow: 0 0 0 32px rgba(51 54 67 / 1) inset;
 		}
 	}
 `;
@@ -54,9 +57,9 @@ export const InputRoot = styled.div<StyleProps>`
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;
-	background-color: ${({ $fill }) => ($fill === 'full' ? '#F8FAFF' : '#fff')};
-	border: 1px solid ${({ $withErrors }) => ($withErrors ? '#eb5757' : '#fff')};
-	border-radius: ${({ $isRounded }) => ($isRounded ? '80px' : '8px')};
+	background-color: ${({ $fill }) => ($fill === 'full' ? '#F8FAFF' : 'rgba(51 54 67 / 1)')};
+	border: 1px solid ${({ $withErrors }) => ($withErrors ? '#eb5757' : 'transparent')};
+	border-radius: ${({ $isRounded }) => ($isRounded ? '80px' : '16px')};
 `;
 
 export default styled.div`

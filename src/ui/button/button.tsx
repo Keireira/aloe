@@ -19,7 +19,7 @@ const Button = ({ children, to, onPress = noop, color = 'blue', size = 'large', 
 	};
 
 	return (
-		<Root $color={color} $size={size} onPress={onPressHd} {...restProps}>
+		<Root $color={color} $size={size} onClick={onPressHd} {...restProps}>
 			{children}
 		</Root>
 	);

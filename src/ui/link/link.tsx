@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { Link as AdobeLink } from 'react-aria-components';
 import Root from './link.styles';
 
 import type { Props } from './link.d';
@@ -16,7 +15,7 @@ const Link = ({ to, children, ...restProps }: Props) => {
 	}
 
 	return (
-		<Root as={AdobeLink} {...restProps} target="_blank" rel="noopener noreferrer">
+		<Root {...restProps} target="_blank" rel="noopener noreferrer">
 			{children}
 		</Root>
 	);

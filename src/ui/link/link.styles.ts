@@ -1,26 +1,26 @@
 import styled from 'styled-components';
 
-export default styled.div`
-	color: #4d70f5;
+export default styled.a`
+	color: #8fa0ff;
 	font-weight: 800;
-	font-size: 14px;
+	font-size: inherit;
 	text-decoration: none;
 	outline: none;
 	cursor: pointer;
 
 	&:link {
-		color: #4d70f5;
+		color: #8fa0ff;
 	}
 
 	&:visited {
-		color: #4d70f5;
+		color: #8fa0ff;
 	}
 
 	&:hover {
-		color: #4d70f5;
+		color: #8fa0ff;
 	}
 
 	&:active {
-		color: #4d70f5;
+		color: #8fa0ff;
 	}
 `;

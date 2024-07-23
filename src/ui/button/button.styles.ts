@@ -7,8 +7,7 @@ const colors = {
 		color: #fff;
 		background-color: #4d70f5;
 
-		&:active,
-		&[data-pressed] {
+		&:active {
 			background-color: #445abe;
 		}
 
@@ -21,8 +20,7 @@ const colors = {
 		color: #4d70f5;
 		background-color: #d0e0ff;
 
-		&:active,
-		&[data-pressed] {
+		&:active {
 			background-color: #e8eefe;
 		}
 
@@ -35,8 +33,7 @@ const colors = {
 		color: #fff;
 		background-color: #ec8085;
 
-		&:active,
-		&[data-pressed] {
+		&:active {
 			background-color: #e34148;
 		}
 
@@ -70,11 +67,11 @@ export default styled.button<StyleProps>`
 	transition-duration: 0.15s;
 	transition-property: background-color, transform, box-shadow;
 
-	&[data-pressed] {
+	&:active {
 		transform: scale(0.97);
 	}
 
-	&[data-disabled] {
+	&:disabled {
 		cursor: not-allowed;
 		opacity: 0.1;
 		pointer-events: none;
