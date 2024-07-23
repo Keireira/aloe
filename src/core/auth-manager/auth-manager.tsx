@@ -1,13 +1,16 @@
 import React from 'react';
+import { useUnit } from 'effector-react';
+
+import { $authStore } from './store';
 
 const Authorized = React.lazy(() => import('./authorized'));
 const NotAuthorized = React.lazy(() => import('./not-authorized'));
 
 const AuthManager = () => {
-	const isAuthorized = false;
+	const authStore = useUnit($authStore);
 
 	switch (true) {
-		case isAuthorized:
+		case authStore.isAuthorized:
 			return (
 				<React.Suspense fallback={<>...</>}>
 					<Authorized />

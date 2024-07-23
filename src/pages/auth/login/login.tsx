@@ -1,21 +1,22 @@
 import React from 'react';
 
 import ROUTES from '@routes';
-import { useLogin } from './hooks';
+import useLogin from './hooks';
 
 import { TextField, Button, Link } from '@ui';
 
 import Root, { StyledForm, Actions, Heading, Title, SubTitle } from './login.styles';
 
 const Login = () => {
-	const form = useLogin();
+	const { form, request } = useLogin();
 
 	const onSubmit = () => {
 		const values = form.getValues();
 
-		// request.fetch(values);
-		console.log(values);
+		request.fetch(values);
 	};
+
+	const isSubmitBtnDisabled = Boolean(form.errors.password || form.errors.username) || request.isFetching;
 
 	return (
 		<Root>
@@ -29,14 +30,14 @@ const Login = () => {
 
 			<StyledForm onSubmit={form.submit(onSubmit)} onChange={form.revalidate}>
 				<TextField
-					aria-label="E-Mail"
-					placeholder="E-Mail"
-					id="email"
-					type="email"
-					autoComplete="email"
+					aria-label="Username"
+					placeholder="Username"
+					id="username"
+					type="text"
+					autoComplete="username"
 					required
-					error={form.errors.email}
-					{...form.email}
+					error={form.errors.username}
+					{...form.username}
 				/>
 
 				<TextField
@@ -52,10 +53,10 @@ const Login = () => {
 
 				<Actions>
 					<Button aria-label="Demo Sign In" type="button" color="lightblue">
-						Demo Sign In
+						Demo
 					</Button>
 
-					<Button aria-label="Sign In" type="submit">
+					<Button aria-label="Sign In" type="submit" disabled={isSubmitBtnDisabled}>
 						Sign In
 					</Button>
 				</Actions>

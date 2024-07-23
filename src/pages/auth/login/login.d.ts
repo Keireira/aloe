@@ -1,5 +1,5 @@
 export type FormFields = {
-	email: string;
+	username: string;
 	password: string;
 };
 
