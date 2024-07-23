@@ -9,7 +9,7 @@ const useLoginPage = () => {
 	const form = useFormHook();
 	const request = useRequestHook();
 
-	const { isSuccess } = request;
+	const { isSuccess, error } = request;
 
 	useEffect(() => {
 		if (!isSuccess) return;
@@ -19,6 +19,12 @@ const useLoginPage = () => {
 		toggleAuth(true);
 		setTokens({ token, refreshToken });
 	}, [isSuccess]);
+
+	useEffect(() => {
+		if (!error) return;
+
+		alert(error);
+	}, [error]);
 
 	return { form, request };
 };

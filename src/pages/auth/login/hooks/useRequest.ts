@@ -6,10 +6,22 @@ type Payload = {
 	password: string;
 };
 
+type ErrorResponse = {
+	message: string;
+};
+
+const withError = (data: ErrorResponse) => {
+	return Boolean(data?.message);
+};
+
+const getErrorMessage = (data: ErrorResponse) => {
+	return data?.message;
+};
+
 const useLogin = () => {
 	const payload = useRef<Payload>();
 
-	const { isFetching, error, refetch, isSuccess, isError, data, status, fetchStatus } = useQuery({
+	const { isFetching, refetch, isSuccess, data, status, fetchStatus } = useQuery({
 		queryKey: ['POST', '/api/auth/login'],
 		queryFn: () => {
 			const request = fetch('https://dummyjson.com/auth/login', {
@@ -35,11 +47,11 @@ const useLogin = () => {
 
 	return {
 		data,
-		error: error,
+		error: getErrorMessage(data),
 		isFetching,
 		isFetched: status === 'success' && fetchStatus === 'idle',
-		isSuccess,
-		isError,
+		isSuccess: isSuccess && !withError(data),
+		isError: withError(data),
 		fetch: fetchData
 	};
 };

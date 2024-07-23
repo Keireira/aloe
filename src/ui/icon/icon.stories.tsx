@@ -10,7 +10,7 @@ const IconBox = styled.div`
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	box-shadow: oklch(49.97% 0 0deg / 0.2) 0px 2px 8px 0px;
 	border-radius: 4px;
 	padding: 10px;
 `;
@@ -65,7 +65,7 @@ const meta: Meta<typeof Icon> = {
 		}
 	},
 	args: {
-		name: 'add',
+		name: 'avatar',
 		width: 24,
 		height: 24
 	}

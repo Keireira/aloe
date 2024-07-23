@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.a`
-	color: #8fa0ff;
+	color: oklch(74% 0.14 275deg);
 	font-weight: 800;
 	font-size: inherit;
 	text-decoration: none;
@@ -9,18 +9,18 @@ export default styled.a`
 	cursor: pointer;
 
 	&:link {
-		color: #8fa0ff;
+		color: oklch(74% 0.14 275deg);
 	}
 
 	&:visited {
-		color: #8fa0ff;
+		color: oklch(74% 0.14 275deg);
 	}
 
 	&:hover {
-		color: #8fa0ff;
+		color: oklch(74% 0.14 275deg);
 	}
 
 	&:active {
-		color: #8fa0ff;
+		color: oklch(74% 0.14 275deg);
 	}
 `;

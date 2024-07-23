@@ -6,7 +6,7 @@ const General = createGlobalStyle`
 	}
 
 	html {
-		background-color: rgba(40 42 54 / 1);
+		background-color: oklch(28.82% 0.022 277.51deg);
 	}
 
 	body {
@@ -30,7 +30,7 @@ const General = createGlobalStyle`
 		outline: none;
 
 		&:focus-visible {
-			box-shadow: 0 0 0 3px rgba(0 123 255 / 0.5);
+			box-shadow: 0 0 0 3px oklch(60.48% 0.21 257deg / 0.5);
 		}
 	}
 `;

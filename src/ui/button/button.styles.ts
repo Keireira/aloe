@@ -4,42 +4,42 @@ import type { StyleProps } from './button.d';
 
 const colors = {
 	blue: css`
-		color: #fff;
-		background-color: #4d70f5;
+		color: oklch(100% 0 0deg);
+		background-color: oklch(60% 0.203 268deg);
 
 		&:active {
-			background-color: #445abe;
+			background-color: oklch(50% 0.158 270deg);
 		}
 
 		&:hover {
-			background-color: #4d70f5;
-			box-shadow: 0 4px 28px rgba(77 112 245 / 0.22);
+			background-color: oklch(60% 0.203 268deg);
+			box-shadow: 0 4px 28px oklch(59.39% 0.203 268deg / 0.22);
 		}
 	`,
 	lightblue: css`
-		color: #4d70f5;
-		background-color: #d0e0ff;
+		color: oklch(60% 0.203 268deg);
+		background-color: oklch(90% 0.05 265deg);
 
 		&:active {
-			background-color: #e8eefe;
+			background-color: oklch(95% 0.022 270deg);
 		}
 
 		&:hover {
-			background-color: #d0e0ff;
-			box-shadow: 0 4px 28px rgba(77 112 245 / 0.22);
+			background-color: oklch(90% 0.05 265deg);
+			box-shadow: 0 4px 28px oklch(59.39% 0.203 268deg / 0.22);
 		}
 	`,
 	red: css`
-		color: #fff;
-		background-color: #ec8085;
+		color: oklch(100% 0 0deg);
+		background-color: oklch(72% 0.13 18deg);
 
 		&:active {
-			background-color: #e34148;
+			background-color: oklch(61% 0.2 23deg);
 		}
 
 		&:hover {
-			background-color: #ec8085;
-			box-shadow: 0 4px 28px rgba(236 128 133 / 0.22);
+			background-color: oklch(72% 0.13 18deg);
+			box-shadow: 0 4px 28px oklch(72.06% 0.133 18deg / 0.22);
 		}
 	`
 };

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-	color: #8fa0ff;
+	color: oklch(74% 0.14 275deg);
 	font-size: 3rem;
 	font-family: monospace;
 `;

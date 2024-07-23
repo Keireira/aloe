@@ -20,7 +20,7 @@ export const Background = styled.div`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to top, rgba(40 42 54 / 1) 0%, rgba(40 42 54 / 0.75) 100%);
+		background: linear-gradient(to top, oklch(29% 0.022 278deg) 0%, oklch(29% 0.022 278deg / 0.75) 100%);
 		content: '';
 	}
 
@@ -32,12 +32,12 @@ export const Background = styled.div`
 		height: 100%;
 		background-image: linear-gradient(
 			200deg,
-			rgba(40 42 54 / 0) 0%,
-			rgba(40 42 54 / 0.1) 5%,
-			rgba(40 42 54 / 0.3) 20%,
-			rgba(40 42 54 / 0.6) 30%,
-			rgba(40 42 54 / 0.8) 40%,
-			rgba(40 42 54 / 1) 100%
+			oklch(28.82% 0.022 278deg / 0) 0%,
+			oklch(28.82% 0.022 278deg / 0.1) 5%,
+			oklch(28.82% 0.022 278deg / 0.3) 20%,
+			oklch(28.82% 0.022 278deg / 0.6) 30%,
+			oklch(28.82% 0.022 278deg / 0.8) 40%,
+			oklch(28.82% 0.022 278deg / 1) 100%
 		);
 		content: '';
 	}
@@ -47,5 +47,5 @@ export default styled.div`
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(40 42 54 / 1);
+	background-color: oklch(29% 0.022 277deg);
 `;
