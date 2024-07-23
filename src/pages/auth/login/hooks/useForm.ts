@@ -6,8 +6,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import type { FormFields, FormKeys } from '../login.d';
 
 const schema = yup.object().shape({
-	username: yup.string().ascii('Поле может содержать только ASCII символы').required('Поле не может быть пустым'),
-	password: yup.string().min(8, 'Пароль должен быть длиной от 8 символов').required('Введите пароль')
+	username: yup.string().ascii('ASCII only').required('No empty field'),
+	password: yup.string().min(6, '6 symbols minimum').required('Password must be provided')
 });
 
 const useFormHook = () => {
