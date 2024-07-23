@@ -4,6 +4,14 @@ export const Title = styled.h1`
 	color: oklch(74% 0.14 275deg);
 	font-size: 3rem;
 	font-family: monospace;
+
+	@media (width <= 980px) {
+		font-size: 2.5rem;
+	}
+
+	@media (width <= 768px) {
+		font-size: 2rem;
+	}
 `;
 
 export const Content = styled.nav`

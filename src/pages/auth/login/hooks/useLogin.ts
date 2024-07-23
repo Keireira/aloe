@@ -23,7 +23,7 @@ const useLoginPage = () => {
 	useEffect(() => {
 		if (!error) return;
 
-		alert(error);
+		console.log(error);
 	}, [error]);
 
 	return { form, request };

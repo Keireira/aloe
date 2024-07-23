@@ -29,7 +29,24 @@ export const StyledForm = styled.form.attrs({
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	width: 40vw;
+	width: 30vw;
+	max-width: 550px;
+
+	@media (width <= 1680px) {
+		width: 40vw;
+	}
+
+	@media (width <= 1280px) {
+		width: 50vw;
+	}
+
+	@media (width <= 980px) {
+		width: 60vw;
+	}
+
+	@media (width <= 768px) {
+		width: 100%;
+	}
 `;
 
 export const Actions = styled.div`
@@ -46,5 +63,14 @@ export default styled.div`
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	padding-left: 8rem;
+	padding-left: 128px;
+
+	@media (width <= 980px) {
+		padding-left: 64px;
+	}
+
+	@media (width <= 768px) {
+		padding-right: 32px;
+		padding-left: 32px;
+	}
 `;

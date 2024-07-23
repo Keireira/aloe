@@ -30,5 +30,14 @@ export default styled.div`
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	padding-left: 8rem;
+	padding-left: 128px;
+
+	@media (width <= 980px) {
+		padding-left: 64px;
+	}
+
+	@media (width <= 768px) {
+		padding-right: 32px;
+		padding-left: 32px;
+	}
 `;
