@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
+export const Title = styled.h2`
 	color: oklch(99% 0 0deg);
 	font-weight: 700;
 	font-size: 3rem;

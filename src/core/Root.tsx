@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { FontStyles, ResetStyles, GeneralStyles } from '@core/styles';
 
+import { Toaster } from '@features';
 import AuthManager from './auth-manager';
 
 const queryClient = new QueryClient();
@@ -17,6 +18,8 @@ const Root = () => (
 		<BrowserRouter>
 			<AuthManager />
 		</BrowserRouter>
+
+		<Toaster />
 	</QueryClientProvider>
 );
 

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import { addToast } from '@features/toaster/store';
 import { setTokens, toggleAuth } from '@core/auth-manager/store';
 
 import useFormHook from './useForm';
@@ -9,7 +10,7 @@ const useLoginPage = () => {
 	const form = useFormHook();
 	const request = useRequestHook();
 
-	const { isSuccess, error } = request;
+	const { isSuccess, isFetched, error } = request;
 
 	useEffect(() => {
 		if (!isSuccess) return;
@@ -21,10 +22,10 @@ const useLoginPage = () => {
 	}, [isSuccess]);
 
 	useEffect(() => {
-		if (!error) return;
+		if (!error || !isFetched) return;
 
-		console.log(error);
-	}, [error]);
+		addToast({ message: error, type: 'error' });
+	}, [error, isFetched]);
 
 	return { form, request };
 };

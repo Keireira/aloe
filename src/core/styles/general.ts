@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const General = createGlobalStyle`
 	:root {
-
+		--white: oklch(98% 0.007 268deg);
+		--red: oklch(65% 0.18 24deg);
 	}
 
 	html {

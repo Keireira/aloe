@@ -5,7 +5,7 @@ import type { StyleProps } from './text-field.d';
 
 export const ErrorMessage = styled(SmallText)`
 	margin-top: 8px;
-	color: oklch(65% 0.18 24deg);
+	color: var(--red);
 `;
 
 export const Label = styled.label`
@@ -57,8 +57,8 @@ export const InputRoot = styled.div<StyleProps>`
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;
-	background-color: ${({ $fill }) => ($fill === 'full' ? 'oklch(98% 0.007 268deg)' : 'oklch(33% 0.023 275deg)')};
-	border: 1px solid ${({ $withErrors }) => ($withErrors ? 'oklch(65% 0.18 24deg)' : 'transparent')};
+	background-color: ${({ $fill }) => ($fill === 'full' ? 'var(--white)' : 'oklch(33% 0.023 275deg)')};
+	border: 1px solid ${({ $withErrors }) => ($withErrors ? 'var(--red)' : 'transparent')};
 	border-radius: ${({ $isRounded }) => ($isRounded ? '80px' : '16px')};
 `;
 
