@@ -26,4 +26,4 @@ const Toast = ({ id, type = 'error', children }: React.PropsWithChildren<Props>)
 	);
 };
 
-export default Toast;
+export default React.memo(Toast);
