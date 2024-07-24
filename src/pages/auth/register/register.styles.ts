@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-	color: oklch(99% 0 0deg);
+	color: oklch(var(--white));
 	font-weight: 700;
 	font-size: 3rem;
 
 	&::first-letter {
-		color: oklch(74% 0.14 275deg);
+		color: oklch(var(--blue));
 	}
 `;
 
 export const SubTitle = styled.h3`
-	color: oklch(99% 0 0deg);
+	color: oklch(var(--white));
 	font-weight: 500;
 	font-size: 1rem;
 `;

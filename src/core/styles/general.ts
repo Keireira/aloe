@@ -2,12 +2,23 @@ import { createGlobalStyle } from 'styled-components';
 
 const General = createGlobalStyle`
 	:root {
-		--white: oklch(98% 0.007 268deg);
-		--red: oklch(65% 0.18 24deg);
+		--white: 99% 0 0deg;
+		--black: 0% 0 0deg;
+		--red: 65% 0.18 24deg;
+		--gray: 67% 0 275deg;
+		--gray-666: 51% 0 0deg;
+		--blue-gray: 29% 0.022 278deg;
+		--blue-gray-dark: 33% 0.025 275deg;
+		--blue-focus: 60% 0.2 257deg;
+		--blue: 74% 0.14 275deg;
+		--blue-2: 60% 0.2 270deg;
+		--blue-3: 50% 0.15 270deg;
+		--blue-4: 90% 0.05 270deg;
+		--blue-5: 95% 0.02 270deg;
 	}
 
 	html {
-		background-color: oklch(28.82% 0.022 277.51deg);
+		background-color: oklch(var(--blue-gray));
 	}
 
 	body {
@@ -31,7 +42,7 @@ const General = createGlobalStyle`
 		outline: none;
 
 		&:focus-visible {
-			box-shadow: 0 0 0 3px oklch(60.48% 0.21 257deg / 0.5);
+			box-shadow: 0 0 0 3px oklch(var(--blue-focus) / 0.5);
 		}
 	}
 `;

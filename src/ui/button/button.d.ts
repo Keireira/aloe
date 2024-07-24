@@ -1,7 +1,7 @@
 import { type AriaButtonProps } from 'react-aria-components';
 
 export type InternalProps = {
-	color?: 'blue' | 'lightblue' | 'red';
+	color?: 'blue' | 'lightblue';
 	size?: 'medium' | 'large';
 	to?: string;
 };

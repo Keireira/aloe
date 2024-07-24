@@ -3,8 +3,8 @@ import { type ToastT } from '../store';
 
 const toastTypes = {
 	error: css`
-		color: var(--white);
-		background-color: var(--red);
+		color: oklch(var(--white));
+		background-color: oklch(var(--red));
 	`
 };
 export default styled.div<{ $type: ToastT['type'] }>`

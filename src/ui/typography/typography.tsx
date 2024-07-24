@@ -3,10 +3,10 @@ import type { TextProps, HeaderProps } from './typography.d';
 
 const shades = {
 	light: css`
-		color: oklch(68.3% 0 0deg);
+		color: oklch(var(--gray-666));
 	`,
 	regular: css`
-		color: oklch(0% 0 0);
+		color: oklch(var(--black));
 	`,
 	inherit: css`
 		color: inherit;

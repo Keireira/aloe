@@ -5,7 +5,7 @@ import type { StyleProps } from './text-field.d';
 
 export const ErrorMessage = styled(SmallText)`
 	margin-top: 8px;
-	color: var(--red);
+	color: oklch(var(--red));
 `;
 
 export const Label = styled.label`
@@ -13,7 +13,7 @@ export const Label = styled.label`
 	top: 17px;
 	left: 16px;
 	z-index: 1;
-	color: oklch(67% 0.013 276deg);
+	color: oklch(var(--gray));
 	font-size: 14px;
 	line-height: 19px;
 `;
@@ -33,7 +33,7 @@ export const Input = styled.input<StyleProps>`
 	width: 100%;
 	margin: 0;
 	padding: 17px 16px;
-	color: oklch(98% 0 0deg);
+	color: oklch(var(--white));
 	font-size: 14px;
 	font-family: 'Nunito Sans', sans-serif;
 	line-height: 19px;
@@ -46,9 +46,9 @@ export const Input = styled.input<StyleProps>`
 		${focused}
 		&:autofill {
 			padding: 17px 16px;
-			border: 1px solid oklch(51.03% 0 0deg);
-			-webkit-text-fill-color: oklch(98% 0 0deg);
-			box-shadow: 0 0 0 32px oklch(33% 0.025 275deg) inset;
+			border: 1px solid oklch(var(--gray-666));
+			-webkit-text-fill-color: oklch(var(--white));
+			box-shadow: 0 0 0 32px oklch(var(--blue-gray-dark)) inset;
 		}
 	}
 `;
@@ -57,8 +57,8 @@ export const InputRoot = styled.div<StyleProps>`
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;
-	background-color: ${({ $fill }) => ($fill === 'full' ? 'var(--white)' : 'oklch(33% 0.023 275deg)')};
-	border: 1px solid ${({ $withErrors }) => ($withErrors ? 'var(--red)' : 'transparent')};
+	background-color: ${({ $fill }) => ($fill === 'full' ? 'oklch(var(--white))' : 'oklch(var(--blue-gray-dark))')};
+	border: 1px solid ${({ $withErrors }) => ($withErrors ? 'oklch(var(--red))' : 'transparent')};
 	border-radius: ${({ $isRounded }) => ($isRounded ? '80px' : '16px')};
 `;
 

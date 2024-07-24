@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.a`
-	color: oklch(74% 0.14 275deg);
+	color: oklch(var(--blue));
 	font-weight: 800;
 	font-size: inherit;
 	text-decoration: none;
@@ -9,18 +9,18 @@ export default styled.a`
 	cursor: pointer;
 
 	&:link {
-		color: oklch(74% 0.14 275deg);
+		color: oklch(var(--blue));
 	}
 
 	&:visited {
-		color: oklch(74% 0.14 275deg);
+		color: oklch(var(--blue));
 	}
 
 	&:hover {
-		color: oklch(74% 0.14 275deg);
+		color: oklch(var(--blue));
 	}
 
 	&:active {
-		color: oklch(74% 0.14 275deg);
+		color: oklch(var(--blue));
 	}
 `;
